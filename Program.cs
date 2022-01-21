@@ -18,7 +18,11 @@ namespace LineComparisionAssignment
         }
         static void Main(string[] args)
         {
-            Console.WriteLine($"length of line is {LengthOfLine()} unit");
+            Console.WriteLine("Insert data for 1st line: ");
+            double line1Length = LengthOfLine();
+            Console.WriteLine("Insert data for 2nd line: ");
+            double line2Length = LengthOfLine();
+            Console.WriteLine($"is {line1Length} == {line2Length}: {line1Length.Equals(line2Length)}");
         }
     }
 }
