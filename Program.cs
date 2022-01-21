@@ -22,7 +22,21 @@ namespace LineComparisionAssignment
             double line1Length = LengthOfLine();
             Console.WriteLine("Insert data for 2nd line: ");
             double line2Length = LengthOfLine();
-            Console.WriteLine($"is {line1Length} == {line2Length}: {line1Length.Equals(line2Length)}");
+            switch (line1Length.CompareTo(line2Length))
+            {
+                case 1:
+                    Console.WriteLine($"{line1Length} > {line2Length}");
+                    break;
+                case -1:
+                    Console.WriteLine($"{line1Length} < {line2Length}");
+                    break;
+                case 0:
+                    Console.WriteLine($"{line1Length} == {line2Length}");
+                    break;
+                default:
+                    Console.WriteLine("Error: somehing went wrong");
+                    break;
+            }
         }
     }
 }
